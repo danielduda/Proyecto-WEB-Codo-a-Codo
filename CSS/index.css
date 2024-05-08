@@ -12,6 +12,12 @@
     font-family: "Roboto", sans-serif;
 }
 
+/* para que luego de hacer click en un enlace no quede de otro color, ni subrayado */
+a:visited, a {
+    color: inherit;
+    text-decoration: none;  
+}
+
 /*fin características generales*/
 
 
