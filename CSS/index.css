@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Roboto:wght@500&display=swap');
 
+:root{
+    --font-main: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
 /*Características generales*/
 * {
     margin: 0;
@@ -20,7 +24,7 @@
     justify-content: flex-start;
     min-height: 600px;
     width: 100%;
-    background-image: url(../Imágenes/logo1.jpeg);
+    background-image: url(../imgs/logo1.jpeg);
     /*imagen fondo en cuerpo del index.html*/
     background-size: cover;
     background-position: center;
@@ -98,15 +102,11 @@ header {
 }
 
 .menu-principal li a {
-
     color: white;
     text-decoration: none;
     font-size: 20px;
     padding: 10px;
     cursor: pointer;
-
-
-
 }
 
 .menu-principal li a:hover {
@@ -164,8 +164,6 @@ footer {
     grid-template-columns: repeat(4, 1fr);
     gap: 50px;
     text-align: center;
-
-
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -214,3 +212,172 @@ footer ul {
 }
 
  /* fin footer CSS */
+
+
+
+ /* ********************* Forumulario *************************** */
+ 
+.hero-contacto {
+    position: relative; /* Asegura que el pseudoelemento se posicione correctamente */
+}
+
+.hero-contacto::after {
+    content: ""; /* Necesario para que el pseudoelemento aparezca */
+    position: absolute; /* Posiciona el pseudoelemento en relación con el contenedor */
+    top: 0;
+    left: 0;
+    width: 100%; /* Cubre todo el ancho del contenedor */
+    height: 100vh; /* Cubre todo el alto del contenedor */
+    background-image: url('../imgs/contacto.jpg'); /* Ruta de la imagen transparente */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.33; /* Ajusta el valor entre 0 y 1 para cambiar la opacidad */
+    z-index: -1; /* Coloca el pseudoelemento detrás del contenido del contenedor */
+}
+
+ .formulario{
+    display: flex;
+    justify-content: center;
+}
+
+.saludo{
+    margin-top: 50px;
+}
+
+.form-col{
+    width: 40%;
+}
+
+input{
+    border: 1px dotted #1c1919;
+    border-radius: 5px;
+    height: 50px;
+    width: 50%;
+    padding: 10px;
+    font-size: 1.1rem;
+}
+
+.input-2-col{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1.2rem;
+    flex-wrap: nowrap;
+    margin-bottom: 15px;
+}
+
+textarea::placeholder, input::placeholder{
+    font-family: var(--font-main);
+    font-size: 1.2em
+}
+
+textarea{
+    border: 1px dotted #1c1919;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    height: 150px;
+    resize: none;
+}
+
+.enviar{
+    margin: 30px 0px;
+    width: 100%;
+    height: 50px;
+    background-color: #96C93E;
+    font-size: 1.3em;
+    color: #fff;
+    cursor: default;
+    transition: 1s ease all;
+}
+
+#enviado{
+    color: #0000ff;
+    font-size: 1.2rem;
+    margin: 5px 0 20px 0;
+    font-weight: bold;
+    text-align: center;
+    display: none;
+}
+
+#error-carga{
+    color: #ff0000;
+    font-size: 1.2rem;
+    margin: 5px 0 20px 0;
+    font-weight: bold;
+    text-align: center;
+    display: none;
+}
+
+
+@media (max-width:1140px){
+
+    .enviar:first-child{
+        margin-bottom: 0;
+    }
+
+    .input-2-col{
+        flex-direction: column;
+    }
+
+    input{
+        width: 100%;
+    }
+
+    .form-col{
+        width: 50%;
+    }
+
+}
+
+
+@media (max-width:768px){
+
+    .form-col{
+        width: 80%;
+    }
+
+
+}
+
+/*
+***********************************************************************************************************************************************************
+***********************************************************************************************************************************************************
+***********************************************************************************************************************************************************
+***********************************************************************************************************************************************************
+***********************************************************************************************************************************************************
+***********************************************************************************************************************************************************
+*/
+
+/* ************************************************************
+  ******************** CLASES GENERALES ************************ 
+   ************************************************************    */
+
+.centrar{
+    text-align: center;
+}
+
+.titulo-h3{
+    padding: 5px 0;
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 1em;
+}
+
+.titulo-h1{
+    padding: 10px 0;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.font-input-normal{
+    font-size: 1.1rem;
+}
+
+.pointer, .pointer:hover{
+    cursor: pointer;
+}
