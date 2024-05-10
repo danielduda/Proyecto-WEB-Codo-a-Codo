@@ -4,12 +4,49 @@
     --font-main: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 
-/*Características generales*/
+/* ************************************************************
+  ******************** CLASES GENERALES ************************ 
+   ************************************************************    */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
+}
+
+.content-form{
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px dotted #8a8a8a;
+    border-radius: 5px;    
+}
+
+.centrar{
+    text-align: center;
+}
+
+.titulo-h3{
+    padding: 5px 0;
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 1em;
+}
+
+.titulo-h1{
+    padding: 10px 0;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.font-input-normal{
+    font-size: 1.1rem;
+}
+
+.pointer, .pointer:hover{
+    cursor: pointer;
 }
 
 /* para que luego de hacer click en un enlace no quede de otro color, ni subrayado */
@@ -18,7 +55,14 @@ a:visited, a {
     text-decoration: none;  
 }
 
-/*fin características generales*/
+.color-text-form{
+    color: #7f7f7f;
+}
+
+/*
+***********************************************************************************************************************************************************
+*/
+
 
 
 /*Sección hero css*/
@@ -226,6 +270,8 @@ footer ul {
 
  /* ********************* Forumulario *************************** */
  
+/* *** Hero contacto *** */
+
 .hero-contacto {
     position: relative; /* Asegura que el pseudoelemento se posicione correctamente */
 }
@@ -236,7 +282,7 @@ footer ul {
     top: 0;
     left: 0;
     width: 100%; /* Cubre todo el ancho del contenedor */
-    height: 100vh; /* Cubre todo el alto del contenedor */
+    height: 120vh; /* Cubre todo el alto del contenedor */
     background-image: url('../imgs/contacto.jpg'); /* Ruta de la imagen transparente */
     background-size: cover;
     background-position: center;
@@ -245,7 +291,9 @@ footer ul {
     z-index: -1; /* Coloca el pseudoelemento detrás del contenido del contenedor */
 }
 
- .formulario{
+/* *** form generalidades *** */
+
+.formulario{
     display: flex;
     justify-content: center;
 }
@@ -277,52 +325,13 @@ input{
     margin-bottom: 15px;
 }
 
-textarea::placeholder, input::placeholder{
-    font-family: var(--font-main);
-    font-size: 1.2em
-}
-
-textarea{
-    border: 1px dotted #1c1919;
-    border-radius: 5px;
-    width: 100%;
-    padding: 10px;
-    font-size: 1.2rem;
-    height: 150px;
-    resize: none;
-}
-
-.enviar{
-    margin: 30px 0px;
-    width: 100%;
-    height: 50px;
-    background-color: #96C93E;
-    font-size: 1.3em;
-    color: #fff;
-    cursor: default;
-    transition: 1s ease all;
-}
-
-#enviado{
-    color: #0000ff;
-    font-size: 1.2rem;
-    margin: 5px 0 20px 0;
-    font-weight: bold;
-    text-align: center;
-    display: none;
-}
-
-#error-carga{
-    color: #ff0000;
-    font-size: 1.2rem;
-    margin: 5px 0 20px 0;
-    font-weight: bold;
-    text-align: center;
-    display: none;
-}
-
+/* *** media querys de form generalidades *** */
 
 @media (max-width:1140px){
+
+    .hero-contacto::after {
+        height: 145vh; 
+    }
 
     .enviar:first-child{
         margin-bottom: 0;
@@ -343,7 +352,7 @@ textarea{
 }
 
 
-@media (max-width:768px){
+@media (max-width:900px){
 
     .form-col{
         width: 80%;
@@ -352,41 +361,121 @@ textarea{
 
 }
 
-/*
-***********************************************************************************************************************************************************
-***********************************************************************************************************************************************************
-***********************************************************************************************************************************************************
-***********************************************************************************************************************************************************
-***********************************************************************************************************************************************************
-***********************************************************************************************************************************************************
-*/
+/* *** Radio *** */
 
-/* ************************************************************
-  ******************** CLASES GENERALES ************************ 
-   ************************************************************    */
+input[type=radio] {
+    color: blue;
+    height: 15px;
+    width: 60px;
+    margin: 20px 0;
+}
 
-.centrar{
+.radio_sexo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@media  (max-width:600px) {
+    
+    .radio_sexo{
+        flex-direction: column;
+        justify-content: center;
+        align-items:flex-start;
+    }
+    
+    .radio_sexo label input{
+        margin: 10px 0;
+    }
+    
+}
+
+/* *** SELECT *** */
+
+.select_tc{
+    padding: 25px 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    height: 150px;
+}
+
+.tipo_consulta{
+    width: 250px;
+    height: 100px;
+    font-size: 1.2rem;
+}
+
+/* *** carga de archivo *** */
+
+input[type=file]{
+    width: 100%;
+}
+
+#cont-input-cv{
+    display: none;
+}
+
+.upload_file{
+    margin-bottom: 0px;
+}
+
+.upload_file p, .upload_file input{
+    padding: 10px 10px;
+}
+
+/* *** TextArea *** */
+
+textarea::placeholder, input::placeholder{
+    font-family: var(--font-main);
+    font-size: 1.2em
+}
+
+textarea{
+    border: 1px dotted #1c1919;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    height: 150px;
+    resize: none;
+}
+
+/* *** Boton enviar *** */
+
+.enviar{
+    margin: 30px 0px;
+    width: 100%;
+    height: 50px;
+    background-color: #96C93E;
+    font-size: 1.3em;
+    color: #fff;
+    cursor: default;
+    transition: 1s ease all;
+}
+
+/* *** Mensajes enviado/error *** */
+
+#enviado{
+    color: #0000ff;
+    font-size: 1.2rem;
+    margin: 5px 0 20px 0;
+    font-weight: bold;
     text-align: center;
+    display: none;
 }
 
-.titulo-h3{
-    padding: 5px 0;
-    margin-top: 10px;
-    font-weight: 400;
-    font-size: 1em;
+#error-carga{
+    color: #ff0000;
+    font-size: 1.2rem;
+    margin: 5px 0 20px 0;
+    font-weight: bold;
+    text-align: center;
+    display: none;
 }
 
-.titulo-h1{
-    padding: 10px 0;
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    font-weight: 500;
-}
 
-.font-input-normal{
-    font-size: 1.1rem;
-}
 
-.pointer, .pointer:hover{
-    cursor: pointer;
-}
+
