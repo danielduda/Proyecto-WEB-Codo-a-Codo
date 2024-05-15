@@ -9,7 +9,8 @@ Daniel:
 -Las imágenes son a modo de ejemplo, así como el nombre de la empresa.
 -Inicié el ruteo a las demás páginas.
 -Apliqué flexbox para el header y sus elementos y CSS grid para el footer.
+-Ruteo a la página sucursales.
 
 pendiente: Realizar un archivo CSS por cada HTML
-            Ruteo del botón turnos en el header; Sucursales y suscribete en el footer.
+            Ruteo del botón turnos en el header; suscribete en el footer.
             Dotar de contenido a las demás páginas html con imágenes, artículos.
