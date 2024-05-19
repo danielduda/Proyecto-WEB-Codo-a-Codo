@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Roboto:wght@500&display=swap');
 
-:root{
-    --font-main: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+:root {
+    --font-main: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 /* ************************************************************
@@ -15,47 +15,49 @@
     font-family: "Roboto", sans-serif;
 }
 
-.content-form{
+.content-form {
     margin-top: 10px;
     padding: 10px;
     background-color: #ffffff;
     border: 1px dotted #8a8a8a;
-    border-radius: 5px;    
+    border-radius: 5px;
 }
 
-.centrar{
+.centrar {
     text-align: center;
 }
 
-.titulo-h3{
+.titulo-h3 {
     padding: 5px 0;
     margin-top: 10px;
     font-weight: 400;
     font-size: 1em;
 }
 
-.titulo-h1{
+.titulo-h1 {
     padding: 10px 0;
     font-size: 2.5em;
     margin-bottom: 10px;
     font-weight: 500;
 }
 
-.font-input-normal{
+.font-input-normal {
     font-size: 1.1rem;
 }
 
-.pointer, .pointer:hover{
+.pointer,
+.pointer:hover {
     cursor: pointer;
 }
 
 /* para que luego de hacer click en un enlace no quede de otro color, ni subrayado */
-a:visited, a {
+a:visited,
+a {
     color: inherit;
-    text-decoration: none;  
+    text-decoration: none;
 }
 
-.color-text-form{
+.color-text-form {
     color: #7f7f7f;
 }
 
@@ -129,7 +131,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 5px;
-    
+
 
 }
 
@@ -167,26 +169,27 @@ header {
 
 
 /*turnos css*/
- .turnos {
-    margin-right: 20px;
+.turnos {
+    margin-right: 60px;
     height: 30px;
-    width: 10%;
+    width: 13%;
     text-decoration: none;
 }
 
- .turnos button {
+.turnos button {
     border: 2px solid rgb(174, 0, 255);
     border-radius: 30px;
     background: transparent;
     box-shadow: 5px 5px 10px #d1d5df, -5px -5px 10px #d1d5df;
     width: 100%;
     height: 30px;
-    text-align: center;    
+    text-align: center;
 }
 
-.turnos button span{
-    color: #fcffeef8;  
-    font-size: 0.8rem; 
+.turnos button span {
+    color: #fcffeef8;
+    font-size: 0.7rem;
+  
 }
 
 /*
@@ -197,10 +200,11 @@ header {
 
 .turnos button:hover span {
     display: inline;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #d1d5df;
-    
+
+    color: rgb(174, 0, 255);
+    text-transform: uppercase;
+   transition: 0.3s ease;
+   
 }
 
 
@@ -213,13 +217,13 @@ header {
 footer {
 
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 50px;
     text-align: center;
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
     padding: 10px;
 
@@ -264,49 +268,64 @@ footer ul {
     color: white;
 }
 
- /* fin footer CSS */
+.datos li a:hover {
+
+    cursor: pointer;
+    color: rgb(174, 0, 255);
+    transition: .3s;
+}
+
+/* fin footer CSS */
 
 
 
- /* ********************* Forumulario *************************** */
- 
+/* ********************* Forumulario *************************** */
+
 /* *** Hero contacto *** */
 
 .hero-contacto {
-    position: relative; /* Asegura que el pseudoelemento se posicione correctamente */
+    position: relative;
+    /* Asegura que el pseudoelemento se posicione correctamente */
 }
 
 .hero-contacto::after {
-    content: ""; /* Necesario para que el pseudoelemento aparezca */
-    position: absolute; /* Posiciona el pseudoelemento en relación con el contenedor */
+    content: "";
+    /* Necesario para que el pseudoelemento aparezca */
+    position: absolute;
+    /* Posiciona el pseudoelemento en relación con el contenedor */
     top: 0;
     left: 0;
-    width: 100%; /* Cubre todo el ancho del contenedor */
-    height: 120vh; /* Cubre todo el alto del contenedor */
-    background-image: url('../imgs/contacto.jpg'); /* Ruta de la imagen transparente */
+    width: 100%;
+    /* Cubre todo el ancho del contenedor */
+    height: 120vh;
+    /* Cubre todo el alto del contenedor */
+    background-image: url('../imgs/contacto.jpg');
+    /* Ruta de la imagen transparente */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.33; /* Ajusta el valor entre 0 y 1 para cambiar la opacidad */
-    z-index: -1; /* Coloca el pseudoelemento detrás del contenido del contenedor */
+    opacity: 0.33;
+    /* Ajusta el valor entre 0 y 1 para cambiar la opacidad */
+    z-index: -1;
+    /* Coloca el pseudoelemento detrás del contenido del contenedor */
 }
 
 /* *** form generalidades *** */
 
-.formulario{
+.formulario {
     display: flex;
     justify-content: center;
 }
 
-.saludo{
+.saludo {
     margin-top: 50px;
 }
 
-.form-col{
+.form-col {
     width: 40%;
 }
 
-input{
+input {
     border: 1px dotted #1c1919;
     border-radius: 5px;
     height: 50px;
@@ -315,7 +334,7 @@ input{
     font-size: 1.1rem;
 }
 
-.input-2-col{
+.input-2-col {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -327,34 +346,34 @@ input{
 
 /* *** media querys de form generalidades *** */
 
-@media (max-width:1140px){
+@media (max-width:1140px) {
 
     .hero-contacto::after {
-        height: 145vh; 
+        height: 145vh;
     }
 
-    .enviar:first-child{
+    .enviar:first-child {
         margin-bottom: 0;
     }
 
-    .input-2-col{
+    .input-2-col {
         flex-direction: column;
     }
 
-    input{
+    input {
         width: 100%;
     }
 
-    .form-col{
+    .form-col {
         width: 50%;
     }
 
 }
 
 
-@media (max-width:900px){
+@media (max-width:900px) {
 
-    .form-col{
+    .form-col {
         width: 80%;
     }
 
@@ -370,30 +389,30 @@ input[type=radio] {
     margin: 20px 0;
 }
 
-.radio_sexo{
+.radio_sexo {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-@media  (max-width:600px) {
-    
-    .radio_sexo{
+@media (max-width:600px) {
+
+    .radio_sexo {
         flex-direction: column;
         justify-content: center;
-        align-items:flex-start;
+        align-items: flex-start;
     }
-    
-    .radio_sexo label input{
+
+    .radio_sexo label input {
         margin: 10px 0;
     }
-    
+
 }
 
 /* *** SELECT *** */
 
-.select_tc{
+.select_tc {
     padding: 25px 5px;
     display: flex;
     flex-direction: row;
@@ -402,7 +421,7 @@ input[type=radio] {
     height: 150px;
 }
 
-.tipo_consulta{
+.tipo_consulta {
     width: 250px;
     height: 100px;
     font-size: 1.2rem;
@@ -410,30 +429,32 @@ input[type=radio] {
 
 /* *** carga de archivo *** */
 
-input[type=file]{
+input[type=file] {
     width: 100%;
 }
 
-#cont-input-cv{
+#cont-input-cv {
     display: none;
 }
 
-.upload_file{
+.upload_file {
     margin-bottom: 0px;
 }
 
-.upload_file p, .upload_file input{
+.upload_file p,
+.upload_file input {
     padding: 10px 10px;
 }
 
 /* *** TextArea *** */
 
-textarea::placeholder, input::placeholder{
+textarea::placeholder,
+input::placeholder {
     font-family: var(--font-main);
     font-size: 1.2em
 }
 
-textarea{
+textarea {
     border: 1px dotted #1c1919;
     border-radius: 5px;
     width: 100%;
@@ -445,7 +466,7 @@ textarea{
 
 /* *** Boton enviar *** */
 
-.enviar{
+.enviar {
     margin: 30px 0px;
     width: 100%;
     height: 50px;
@@ -458,7 +479,7 @@ textarea{
 
 /* *** Mensajes enviado/error *** */
 
-#enviado{
+#enviado {
     color: #0000ff;
     font-size: 1.2rem;
     margin: 5px 0 20px 0;
@@ -467,7 +488,7 @@ textarea{
     display: none;
 }
 
-#error-carga{
+#error-carga {
     color: #ff0000;
     font-size: 1.2rem;
     margin: 5px 0 20px 0;
@@ -478,8 +499,8 @@ textarea{
 
 /*css sucursales*/
 
-.sucursales{
-    display:flex;
+.sucursales {
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px;
@@ -488,21 +509,94 @@ textarea{
     background-color: #121233;
 }
 
-.sucursales .sucursal{
-   
+.sucursales .sucursal {
+
     border: 5px solid white;
     text-align: center;
     color: #f1ebeb;
-    margin:5px;
+    margin: 5px;
 }
 
 
-.mapa iframe{
-    width:100%;
-    height:300px;
+.mapa iframe {
+    width: 100%;
+    height: 300px;
+}
+
+
+.bi-whatsapp {
+    /* Estilos específicos para el ícono de WhatsApp */
+    font-size: 24px; /* Tamaño del ícono */
+    color: #038031; 
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
+    
+}
+
+
+/*TIENDA CSS*/
+
+.contenedor{
+    max-width: 1200px;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: #121233;
+    margin-bottom: 110px;
+}
+/* SECCION CONTENEDOR DE ITEMS */
+.contenedor .contenedor-items{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap:30px;
+    grid-row-gap: 30px;
+    /* width: 60%; */
+    width: 100%;
+    transition: .3s;
+}
+.contenedor .contenedor-items .item{
+    max-width: 200px;
+    margin: auto;
+    border: 1px solid #666;
+    border-radius: 10px;
+    padding: 20px;
+    transition: .3s;
+    background-color: white;
+}
+.contenedor .contenedor-items .item .img-item{
+    width: 100%;
+}
+.contenedor .contenedor-items .item:hover{
+    box-shadow: 0 0 10px rgb(174, 0, 255);
+    scale: 1.05;
+}
+.contenedor .contenedor-items .item .titulo-item{
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+.contenedor .contenedor-items .item .precio-item{
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.contenedor .contenedor-items .item .boton-item{
+    display: block;
+    margin: 10px auto;
+    border: none;
+    background-color: black;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 
 
 
-
+/*FIN TIENDA CSS*/
