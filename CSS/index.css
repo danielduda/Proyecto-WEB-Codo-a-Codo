@@ -499,6 +499,8 @@ textarea {
 
 /*css sucursales*/
 
+
+
 .sucursales {
     display: flex;
     justify-content: space-between;
@@ -507,6 +509,7 @@ textarea {
     width: 100%;
     min-height: 626px;
     background-color: #121233;
+  
 }
 
 .sucursales .sucursal {
