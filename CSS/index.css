@@ -297,7 +297,7 @@ footer ul {
     left: 0;
     width: 100%;
     /* Cubre todo el ancho del contenedor */
-    height: 120vh;
+    height: 140vh;
     /* Cubre todo el alto del contenedor */
     background-image: url('../imgs/contacto.jpg');
     /* Ruta de la imagen transparente */
@@ -433,7 +433,7 @@ input[type=file] {
     width: 100%;
 }
 
-#cont-input-cv {
+#div_imagen {
     display: none;
 }
 

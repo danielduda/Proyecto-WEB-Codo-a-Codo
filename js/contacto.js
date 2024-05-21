@@ -15,7 +15,7 @@ const opc_sexo = document.getElementsByName("sexo");
 const tipo_consulta = document.getElementById("tipo_consulta")
 const archivo = document.getElementById('archivo');
 
-const cont_input_cv = document.getElementById('cont-input-cv')
+const div_imagen = document.getElementById('div_imagen')
 const id_contacto = document.getElementById('id_contacto')
 
 let lEnvio = false
@@ -72,7 +72,7 @@ function do_enviar(){
     }
 
     if(cMensaje.length==0 && cConsulta=="3" && archivo.files.length <= 0 ){
-        cMensaje = `Por favor, debe cargar su CV! `;
+        cMensaje = `Por favor, cargue una imagen del pelo que le gustaría! `;
     }
 
     if(cMensaje.length > 0){
@@ -91,9 +91,9 @@ function do_enviar(){
 function mostrarInputFile(){
     
     if(tipo_consulta.value=="3"){
-        cont_input_cv.style.display="block";
+        div_imagen.style.display="block";
     }else{
-        cont_input_cv.style.display="None";
+        div_imagen.style.display="None";
     }
 }
 
@@ -129,3 +129,24 @@ function hide_mensajes(){
 function go_inicio(){
     window.location.href = "../index.html";
 }
+
+
+function validarImagen() {
+    let input = document.getElementById('archivo');
+    let archivo = input.files[0];
+
+    txtErrCarga.style.display = 'None';
+    
+    if (archivo) {
+      var nombreArchivo = archivo.name;
+      var extension = nombreArchivo.split('.').pop().toLowerCase();
+  
+      if (extension !== 'jpg' && extension !== 'jpeg' && extension !== 'png') {
+        txtErrCarga.innerText = 'Archivo inválido. Solo se permiten archivos con extensiones .jpg, .jpeg o .png';
+        txtErrCarga.style.display = 'block';
+        input.value = ''; 
+      }
+    }
+
+  }
+  

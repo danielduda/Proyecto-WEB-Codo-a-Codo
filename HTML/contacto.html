@@ -53,15 +53,15 @@
                            <select class="tipo_consulta" id="tipo_consulta" size="3" onchange="mostrarInputFile()"> <!-- el atributo size hace que NO sea un dropdownlist ademas, permite ver el elemento preseleccionado!-->
                                 <option value="1">Nuestros servicios</option>
                                 <option value="2">Proveedores</option>
-                                <option value="3">Quiero trabajar con Uds.</option>
+                                <option value="3">Quiero este peinado</option>
                                 <option value="4">Cursos</option>
                                 <option value="5" selected="selected" >Otro tipo de consulta</option>
                            </select>
                         </p>
                     </div>
-                    <div class="upload_file content-form" id="cont-input-cv">
-                        <p class="color-text-form">Por favor, dejenos su CV:</p>
-                        <p><input type="file" id="archivo" /></p>                        
+                    <div class="upload_file content-form" id="div_imagen">
+                        <p class="color-text-form">Subi una imagen de que peinatado te gustaría...</p>
+                        <p><input type="file" id="archivo" onchange="validarImagen()" /></p>                        
                     </div>
                     <input class="enviar pointer" id="btn-enviar" type="button"  value="Enviar">
                 </div>
