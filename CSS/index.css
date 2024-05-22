@@ -234,15 +234,52 @@ footer ul {
     list-style-type: none;
 }
 
+
+/* Estilos globales */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+/* Contenedor principal */   
+.container { 
+    width: 80%;
+    margin: 0 auto;
+    padding: 1% 4%;
+    }
+
+/* Estilo para la seccion Nosotros */  
+.nosotros-section {
+    background-color: #f9f9f9;
+    padding: 20px 0;
+    text-align: center;
+
+    }
+
+.nosotros-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+
+    }
+.nosotros-section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+    } 
+
 /* Estilos para los íconos del footer redes sociales*/
 .redes {
-
     padding: 0;
     margin: 0;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+}
 
+footer div p{
+    padding: 10px 0 15px 0;
 }
 
 .redes i {
@@ -253,6 +290,11 @@ footer ul {
     color: #f1ebeb;
     /* Color por defecto de los íconos */
 
+}
+
+.autores{
+    padding: 0px;
+    margin-top: 50px;
 }
 
 .redes i:hover {
@@ -297,7 +339,7 @@ footer ul {
     left: 0;
     width: 100%;
     /* Cubre todo el ancho del contenedor */
-    height: 140vh;
+    height: 120vh;
     /* Cubre todo el alto del contenedor */
     background-image: url('../imgs/contacto.jpg');
     /* Ruta de la imagen transparente */
@@ -318,7 +360,7 @@ footer ul {
 }
 
 .saludo {
-    margin-top: 50px;
+    padding: 30px 0px 20px 0px;
 }
 
 .form-col {
@@ -425,6 +467,16 @@ input[type=radio] {
     width: 250px;
     height: 100px;
     font-size: 1.2rem;
+}
+
+@media (max-width:600px){
+    .select_tc{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 22%;
+        gap: 10px;
+    }
 }
 
 /* *** carga de archivo *** */
@@ -542,11 +594,16 @@ textarea {
     max-width: 1200px;
     padding: 10px;
     margin: auto;
-    display: flex;
-    justify-content: space-between;
     background-color: #121233;
     margin-bottom: 110px;
 }
+
+.titulo-tienda{
+    text-align: center;
+    padding: 35px 0px 10px 0px;
+    color: white;
+}
+
 /* SECCION CONTENEDOR DE ITEMS */
 .contenedor .contenedor-items{
     margin-top: 30px;
@@ -599,7 +656,18 @@ textarea {
     cursor: pointer;
 }
 
+.nuestros-servicios{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 15%;
+    font-style: italic;
+    font-size: 1.5rem;
+}
 
-
+.nuestros-servicios h1{
+    font-size: 2.2rem;
+}
 
 /*FIN TIENDA CSS*/
