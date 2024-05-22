@@ -109,17 +109,6 @@ a {
 /*fin seccion hero css*/
 
 
-/*css marquee*/
-marquee {
-    color: #005816;
-    font-size: 15px;
-    font-weight: bold;
-    background-color: #fdf7f7;
-}
-
-/* fin css marquee*/
-
-
 /*Cabecera css*/
 
 header {
@@ -169,44 +158,44 @@ header {
 
 
 /*turnos css*/
-.turnos {
+a.turnos {
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
     margin-right: 60px;
     height: 30px;
     width: 13%;
+    background-color: #050505;
+    /* Color de fondo del botón */
     text-decoration: none;
-}
-
-.turnos button {
+    /* Sin subrayado */
     border: 2px solid rgb(174, 0, 255);
     border-radius: 30px;
-    background: transparent;
     box-shadow: 5px 5px 10px #d1d5df, -5px -5px 10px #d1d5df;
-    width: 100%;
-    height: 30px;
-    text-align: center;
 }
 
-.turnos button span {
-    color: #fcffeef8;
-    font-size: 0.7rem;
-  
+a.turnos span {
+    color: white;
+    margin: 0px;
+    font-size: 0.8rem;
+    /* Elimina márgenes para centrar mejor */
 }
 
-/*
-.turnos button span{
-    display: none; 
-}
-*/
 
-.turnos button:hover span {
+a.turnos:hover {
+    background-color: #121233;
+    
+}
+
+a.turnos:hover span {
+
     display: inline;
-
-    color: rgb(174, 0, 255);
     text-transform: uppercase;
-   transition: 0.3s ease;
+    transition: 0.3s ease;
    
 }
-
 
 /*fin turnos css*/
 
@@ -241,34 +230,38 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    }
-/* Contenedor principal */   
-.container { 
+}
+
+/* Contenedor principal */
+.container {
     width: 80%;
     margin: 0 auto;
     padding: 1% 4%;
-    }
+}
 
-/* Estilo para la seccion Nosotros */  
+/* Estilo para la seccion Nosotros */
 .nosotros-section {
     background-color: #f9f9f9;
     padding: 20px 0;
     text-align: center;
+    margin-bottom: 110px;
 
-    }
+}
 
 .nosotros-section h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
     color: #333;
 
-    }
+}
+
 .nosotros-section p {
     font-size: 1.2em;
     line-height: 1.6;
     color: #666;
     margin-bottom: 20px;
-    } 
+    text-align: justify;
+}
 
 /* Estilos para los íconos del footer redes sociales*/
 .redes {
@@ -278,7 +271,7 @@ body {
     justify-content: center;
 }
 
-footer div p{
+footer div p {
     padding: 10px 0 15px 0;
 }
 
@@ -292,7 +285,7 @@ footer div p{
 
 }
 
-.autores{
+.autores {
     padding: 0px;
     margin-top: 50px;
 }
@@ -469,8 +462,8 @@ input[type=radio] {
     font-size: 1.2rem;
 }
 
-@media (max-width:600px){
-    .select_tc{
+@media (max-width:600px) {
+    .select_tc {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -552,7 +545,14 @@ textarea {
 /*css sucursales*/
 
 
+.titulo-sucursal{
 
+    text-align: center;
+    padding: 35px 0px 10px 0px;
+    color: white;
+    background-color: #121233;
+
+}
 .sucursales {
     display: flex;
     justify-content: space-between;
@@ -561,7 +561,8 @@ textarea {
     width: 100%;
     min-height: 626px;
     background-color: #121233;
-  
+     margin-bottom: 110px;
+
 }
 
 .sucursales .sucursal {
@@ -581,41 +582,45 @@ textarea {
 
 .bi-whatsapp {
     /* Estilos específicos para el ícono de WhatsApp */
-    font-size: 24px; /* Tamaño del ícono */
-    color: #038031; 
-    margin-right: 10px; /* Espacio entre el ícono y el texto */
-    
+    font-size: 24px;
+    /* Tamaño del ícono */
+    color: #038031;
+    margin-right: 10px;
+    /* Espacio entre el ícono y el texto */
+
 }
 
 
 /*TIENDA CSS*/
 
-.contenedor{
-    max-width: 1200px;
+.contenedor {
+   
     padding: 10px;
     margin: auto;
+    width: 100%;
     background-color: #121233;
     margin-bottom: 110px;
 }
 
-.titulo-tienda{
+.titulo-tienda {
     text-align: center;
     padding: 35px 0px 10px 0px;
     color: white;
 }
 
 /* SECCION CONTENEDOR DE ITEMS */
-.contenedor .contenedor-items{
+.contenedor .contenedor-items {
     margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    grid-gap:30px;
+    grid-gap: 30px;
     grid-row-gap: 30px;
     /* width: 60%; */
     width: 100%;
     transition: .3s;
 }
-.contenedor .contenedor-items .item{
+
+.contenedor .contenedor-items .item {
     max-width: 200px;
     margin: auto;
     border: 1px solid #666;
@@ -624,28 +629,32 @@ textarea {
     transition: .3s;
     background-color: white;
 }
-.contenedor .contenedor-items .item .img-item{
+
+.contenedor .contenedor-items .item .img-item {
     width: 100%;
 }
-.contenedor .contenedor-items .item:hover{
+
+.contenedor .contenedor-items .item:hover {
     box-shadow: 0 0 10px rgb(174, 0, 255);
     scale: 1.05;
 }
-.contenedor .contenedor-items .item .titulo-item{
+
+.contenedor .contenedor-items .item .titulo-item {
     display: block;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
-    
+
 }
-.contenedor .contenedor-items .item .precio-item{
+
+.contenedor .contenedor-items .item .precio-item {
     display: block;
     text-align: center;
     font-weight: bold;
     font-size: 22px;
 }
 
-.contenedor .contenedor-items .item .boton-item{
+.contenedor .contenedor-items .item .boton-item {
     display: block;
     margin: 10px auto;
     border: none;
@@ -656,7 +665,7 @@ textarea {
     cursor: pointer;
 }
 
-.nuestros-servicios{
+.nuestros-servicios {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -666,7 +675,7 @@ textarea {
     font-size: 1.5rem;
 }
 
-.nuestros-servicios h1{
+.nuestros-servicios h1 {
     font-size: 2.2rem;
 }
 
