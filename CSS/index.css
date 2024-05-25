@@ -245,7 +245,12 @@ body {
     padding: 20px 0;
     text-align: center;
     margin-bottom: 110px;
+}
 
+@media (max-width: 600px){
+    .nosotros-section{
+        height: 210vh;
+    }
 }
 
 .nosotros-section h2 {
@@ -287,7 +292,7 @@ footer div p {
 
 .autores {
     padding: 0px;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 .redes i:hover {
@@ -320,29 +325,21 @@ footer div p {
 
 .hero-contacto {
     position: relative;
-    /* Asegura que el pseudoelemento se posicione correctamente */
 }
 
 .hero-contacto::after {
     content: "";
-    /* Necesario para que el pseudoelemento aparezca */
     position: absolute;
-    /* Posiciona el pseudoelemento en relación con el contenedor */
     top: 0;
     left: 0;
     width: 100%;
-    /* Cubre todo el ancho del contenedor */
     height: 120vh;
-    /* Cubre todo el alto del contenedor */
     background-image: url('../imgs/contacto.jpg');
-    /* Ruta de la imagen transparente */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0.33;
-    /* Ajusta el valor entre 0 y 1 para cambiar la opacidad */
     z-index: -1;
-    /* Coloca el pseudoelemento detrás del contenido del contenedor */
 }
 
 /* *** form generalidades *** */
@@ -382,10 +379,6 @@ input {
 /* *** media querys de form generalidades *** */
 
 @media (max-width:1140px) {
-
-    .hero-contacto::after {
-        height: 145vh;
-    }
 
     .enviar:first-child {
         margin-bottom: 0;
@@ -442,6 +435,11 @@ input[type=radio] {
     .radio_sexo label input {
         margin: 10px 0;
     }
+
+    .hero-contacto::after {
+        height: 135vh;
+    }
+
 
 }
 
@@ -591,15 +589,20 @@ textarea {
 }
 
 
-/*TIENDA CSS*/
+/* ************************** TIENDA CSS ******************************/
 
-.contenedor {
-   
+.contenedor-tienda {
     padding: 10px;
     margin: auto;
     width: 100%;
     background-color: #121233;
     margin-bottom: 110px;
+}
+
+@media (max-width: 490px){
+    .contenedor-tienda{
+        height: 390vh;        
+    }
 }
 
 .titulo-tienda {
@@ -609,7 +612,7 @@ textarea {
 }
 
 /* SECCION CONTENEDOR DE ITEMS */
-.contenedor .contenedor-items {
+.contenedor-tienda .contenedor-items {
     margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -620,7 +623,7 @@ textarea {
     transition: .3s;
 }
 
-.contenedor .contenedor-items .item {
+.contenedor-tienda .contenedor-items .item {
     max-width: 200px;
     margin: auto;
     border: 1px solid #666;
@@ -630,16 +633,16 @@ textarea {
     background-color: white;
 }
 
-.contenedor .contenedor-items .item .img-item {
+.contenedor-tienda .contenedor-items .item .img-item {
     width: 100%;
 }
 
-.contenedor .contenedor-items .item:hover {
+.contenedor-tienda .contenedor-items .item:hover {
     box-shadow: 0 0 10px rgb(174, 0, 255);
     scale: 1.05;
 }
 
-.contenedor .contenedor-items .item .titulo-item {
+.contenedor-tienda .contenedor-items .item .titulo-item {
     display: block;
     font-weight: bold;
     text-align: center;
@@ -647,14 +650,14 @@ textarea {
 
 }
 
-.contenedor .contenedor-items .item .precio-item {
+.contenedor-tienda .contenedor-items .item .precio-item {
     display: block;
     text-align: center;
     font-weight: bold;
     font-size: 22px;
 }
 
-.contenedor .contenedor-items .item .boton-item {
+.contenedor-tienda .contenedor-items .item .boton-item {
     display: block;
     margin: 10px auto;
     border: none;
@@ -664,7 +667,9 @@ textarea {
     border-radius: 5px;
     cursor: pointer;
 }
+/*FIN TIENDA CSS*/
 
+/* ************** NOSOTROS ***************** */
 .nuestros-servicios {
     display: flex;
     flex-direction: column;
@@ -679,4 +684,3 @@ textarea {
     font-size: 2.2rem;
 }
 
-/*FIN TIENDA CSS*/
