@@ -540,7 +540,7 @@ textarea {
     display: none;
 }
 
-/*css sucursales*/
+/* ******************* css sucursales ********************** */
 
 
 .titulo-sucursal{
@@ -557,9 +557,14 @@ textarea {
     align-items: center;
     padding: 5px;
     width: 100%;
-    min-height: 626px;
+    min-height: 554px;
     background-color: #121233;
-     margin-bottom: 110px;
+    margin-bottom: 110px;
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+    justify-content: space-around;
+    flex-wrap: wrap;
 
 }
 
@@ -568,15 +573,13 @@ textarea {
     border: 5px solid white;
     text-align: center;
     color: #f1ebeb;
-    margin: 5px;
+    margin: 25px;
 }
-
 
 .mapa iframe {
     width: 100%;
     height: 300px;
 }
-
 
 .bi-whatsapp {
     /* Estilos específicos para el ícono de WhatsApp */
