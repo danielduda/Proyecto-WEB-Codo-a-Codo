@@ -1,0 +1,760 @@
+@import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Roboto:wght@500&display=swap');
+
+:root {
+    --font-main: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* ************************************************************
+  ******************** CLASES GENERALES ************************ 
+   ************************************************************    */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.fondo-negro{
+    background-color: #000000;
+}
+
+.content-form {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px dotted #8a8a8a;
+    border-radius: 5px;
+}
+
+.centrar {
+    text-align: center;
+}
+
+.titulo-h3 {
+    padding: 5px 0;
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 1em;
+}
+
+.titulo-h1 {
+    padding: 10px 0;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.font-input-normal {
+    font-size: 1.1rem;
+}
+
+.pointer,
+.pointer:hover {
+    cursor: pointer;
+}
+
+/* para que luego de hacer click en un enlace no quede de otro color, ni subrayado */
+a:visited,
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.color-text-form {
+    color: #7f7f7f;
+}
+
+/*
+***********************************************************************************************************************************************************
+*/
+
+
+
+/*Sección hero css*/
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 630px;
+    width: 100%;
+    /*imagen fondo en cuerpo del index.html*/
+    background-image: url(../imgs/logo1.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.hero h1 {
+
+    color: white;
+    padding: 50px 20px;
+    font-weight: bold;
+    font-size: 80px;
+}
+
+.hero h1 span {
+    color: rgb(185, 6, 6);
+}
+
+.hero p {
+
+    font-size: 30px;
+    color: white;
+    padding: 50px 20px;
+}
+
+.hero p span {
+    color: rgb(185, 6, 6);
+}
+
+/*fin seccion hero css*/
+
+
+/*Cabecera css*/
+
+header {
+    width: 100%;
+    height: 120px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+
+
+}
+
+/*logo imagen */
+.logo img {
+    height: 115px;
+    width: 200px;
+    opacity: 0.6;
+}
+
+
+/*menu principal css */
+
+
+.menu-principal ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+
+}
+
+.menu-principal li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.menu-principal li a:hover {
+
+    color: rgb(174, 0, 255);
+    transition: .3s;
+}
+
+
+/*turnos css*/
+a.turnos {
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    margin-right: 60px;
+    height: 30px;
+    width: 13%;
+    background-color: #050505;
+    /* Color de fondo del botón */
+    text-decoration: none;
+    /* Sin subrayado */
+    border: 2px solid rgb(174, 0, 255);
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px #d1d5df, -5px -5px 10px #d1d5df;
+}
+
+a.turnos span {
+    color: white;
+    margin: 0px;
+    font-size: 0.8rem;
+    /* Elimina márgenes para centrar mejor */
+}
+
+
+a.turnos:hover {
+    background-color: #121233;
+    
+}
+
+a.turnos:hover span {
+
+    display: inline;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+   
+}
+
+/*fin turnos css*/
+
+
+
+/*footer css*/
+
+footer {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #000000;
+    color: #fff;
+    padding: 10px;
+
+
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+
+/* Estilos globales */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Contenedor principal */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1% 4%;
+}
+
+/* Estilo para la seccion Nosotros */
+.nosotros-section {
+    background-color: #f9f9f9;
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 110px;
+}
+
+@media (max-width: 600px){
+    .nosotros-section{
+        height: 210vh;
+    }
+}
+
+.nosotros-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+
+}
+
+.nosotros-section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Estilos para los íconos del footer redes sociales*/
+.redes {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+footer div p {
+    padding: 10px 0 15px 0;
+}
+
+.redes i {
+    margin: 5px;
+    /* Espacio entre los íconos */
+    font-size: 20px;
+    /* Tamaño del ícono ajustado */
+    color: #f1ebeb;
+    /* Color por defecto de los íconos */
+
+}
+
+.contenedor-autores{
+    padding-right: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.autores {
+    padding: 0px;
+}
+
+.redes i:hover {
+
+    color: rgb(174, 0, 255);
+    transition: .3s;
+
+}
+
+.datos li a {
+
+    text-decoration: none;
+    color: white;
+}
+
+.datos li a:hover {
+
+    cursor: pointer;
+    color: rgb(174, 0, 255);
+    transition: .3s;
+}
+
+/* fin footer CSS */
+
+
+
+/* ********************* Forumulario *************************** */
+
+/* *** Hero contacto *** */
+
+.hero-contacto {
+    position: relative;
+}
+
+.hero-contacto::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120vh;
+    background-image: url('../imgs/contacto.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.33;
+    z-index: -1;
+}
+
+/* *** form generalidades *** */
+
+.formulario {
+    display: flex;
+    justify-content: center;
+}
+
+.saludo {
+    padding: 30px 0px 20px 0px;
+}
+
+.form-col {
+    width: 40%;
+}
+
+input {
+    border: 1px dotted #1c1919;
+    border-radius: 5px;
+    height: 50px;
+    width: 50%;
+    padding: 10px;
+    font-size: 1.1rem;
+}
+
+.input-2-col {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1.2rem;
+    flex-wrap: nowrap;
+    margin-bottom: 15px;
+}
+
+/* Animación desde la izquierda */
+@keyframes anima-izquierda {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+
+/* Animación desde la derecha */
+@keyframes anima-derecha {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+@keyframes hacia-arriba {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+@keyframes hacia-abajo {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
+
+.izq2der {
+    animation: anima-izquierda 2s forwards;
+}
+  
+.der2izq {
+    animation: anima-derecha 2s forwards;
+}
+
+.aba2arr{
+    animation: hacia-arriba 2s forwards;
+}
+
+.arr2aba{
+    animation: hacia-abajo 2s forwards;
+}
+
+@media (max-width:1140px) {
+
+    .enviar:first-child {
+        margin-bottom: 0;
+    }
+
+    .input-2-col {
+        flex-direction: column;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    .form-col {
+        width: 50%;
+    }
+
+}
+
+
+@media (max-width:900px) {
+
+    .form-col {
+        width: 80%;
+    }
+
+
+}
+
+/* *** Radio *** */
+
+input[type=radio] {
+    color: blue;
+    height: 15px;
+    width: 60px;
+    margin: 20px 0;
+}
+
+.radio_sexo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width:600px) {
+
+    .radio_sexo {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .radio_sexo label input {
+        margin: 10px 0;
+    }
+
+    .hero-contacto::after {
+        height: 135vh;
+    }
+
+
+}
+
+/* *** SELECT *** */
+
+.select_tc {
+    padding: 25px 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    height: 150px;
+}
+
+.tipo_consulta {
+    width: 250px;
+    height: 100px;
+    font-size: 1.2rem;
+}
+
+@media (max-width:600px) {
+    .select_tc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 22%;
+        gap: 10px;
+    }
+}
+
+/* *** carga de archivo *** */
+
+input[type=file] {
+    width: 100%;
+}
+
+#div_imagen {
+    display: none;
+}
+
+.upload_file {
+    margin-bottom: 0px;
+}
+
+.upload_file p,
+.upload_file input {
+    padding: 10px 10px;
+}
+
+/* *** TextArea *** */
+
+textarea::placeholder,
+input::placeholder {
+    font-family: var(--font-main);
+    font-size: 1.2em
+}
+
+textarea {
+    border: 1px dotted #1c1919;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    height: 150px;
+    resize: none;
+}
+
+/* *** Boton enviar *** */
+
+.enviar {
+    margin: 30px 0px;
+    width: 100%;
+    height: 50px;
+    background-color: #96C93E;
+    font-size: 1.3em;
+    color: #fff;
+    cursor: default;
+    transition: 1s ease all;
+}
+
+/* *** Mensajes enviado/error *** */
+
+#enviado {
+    color: #0000ff;
+    font-size: 1.2rem;
+    margin: 5px 0 20px 0;
+    font-weight: bold;
+    text-align: center;
+    display: none;
+}
+
+#error-carga {
+    color: #ff0000;
+    font-size: 1.2rem;
+    margin: 5px 0 20px 0;
+    font-weight: bold;
+    text-align: center;
+    display: none;
+}
+
+/* ******************* css sucursales ********************** */
+
+
+.titulo-sucursal{
+
+    text-align: center;
+    padding: 35px 0px 10px 0px;
+    color: white;
+    background-color: #121233;
+
+}
+.sucursales {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    width: 100%;
+    min-height: 554px;
+    background-color: #121233;
+    margin-bottom: 110px;
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+.sucursales .sucursal {
+
+    border: 5px solid white;
+    text-align: center;
+    color: #f1ebeb;
+    margin: 25px;
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 300px;
+}
+
+.bi-whatsapp {
+    /* Estilos específicos para el ícono de WhatsApp */
+    font-size: 24px;
+    /* Tamaño del ícono */
+    color: #038031;
+    margin-right: 10px;
+    /* Espacio entre el ícono y el texto */
+
+}
+
+
+/* ************************** TIENDA CSS ******************************/
+
+.contenedor-tienda {
+    padding: 10px;
+    margin: auto;
+    width: 100%;
+    background-color: #121233;
+    margin-bottom: 110px;
+}
+
+@media (max-width: 490px){
+    .contenedor-tienda{
+        height: 390vh;        
+    }
+}
+
+.titulo-tienda {
+    text-align: center;
+    padding: 35px 0px 10px 0px;
+    color: white;
+}
+
+/* SECCION CONTENEDOR DE ITEMS */
+.contenedor-tienda .contenedor-items {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap: 30px;
+    grid-row-gap: 30px;
+    /* width: 60%; */
+    width: 100%;
+    transition: .3s;
+}
+
+.contenedor-tienda .contenedor-items .item {
+    max-width: 200px;
+    margin: auto;
+    border: 1px solid #666;
+    border-radius: 10px;
+    padding: 20px;
+    transition: .3s;
+    background-color: white;
+}
+
+.contenedor-tienda .contenedor-items .item .img-item {
+    width: 100%;
+}
+
+.contenedor-tienda .contenedor-items .item:hover {
+    box-shadow: 0 0 10px rgb(174, 0, 255);
+    scale: 1.05;
+}
+
+.contenedor-tienda .contenedor-items .item .titulo-item {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+.contenedor-tienda .contenedor-items .item .precio-item {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.contenedor-tienda .contenedor-items .item .boton-item {
+    display: block;
+    margin: 10px auto;
+    border: none;
+    background-color: black;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/*FIN TIENDA CSS*/
+
+/* ************** NOSOTROS ***************** */
+.nuestros-servicios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 15%;
+    font-style: italic;
+    font-size: 1.5rem;
+}
+
+.nuestros-servicios h1 {
+    font-size: 2.2rem;
+}
+

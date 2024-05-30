@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
-    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/estilos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="icon" type="image/svg+xml" href="../imgs/favicon.svg">
 </head>
@@ -33,21 +33,21 @@
         <div class="form-contacto">
             <form class="formulario" id="id_contacto">
                 <div class="form-col">
-                    <div class="input-2-col">
+                    <div class="input-2-col der2izq">
                         <input type="text" name="nombre" id="nombre" placeholder="Nombre">
                         <input type="text" name="apellido" id="apellido" placeholder="Apellido">
                     </div>
-                    <p><input type="text" name="email" id="email" class="input-2-col font-input-normal" placeholder="ingrese su correo electronico"></p>
-                    <p class="mensaje" >
+                    <p class="izq2der"><input type="text" name="email" id="email" class="input-2-col font-input-normal" placeholder="ingrese su correo electronico"></p>
+                    <p class="mensaje der2izq" >
                         <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Dejanos tu mensaje..."></textarea>
                     </p>
-                    <div class="radio_sexo content-form">
+                    <div class="radio_sexo content-form izq2der">
                         <p class="color-text-form">Sexo:</p>
                         <label><input type="radio" name="sexo" value="F">Hombre</label>
                         <label><input type="radio" name="sexo" value="M">Mujer</label>
                         <label><input type="radio" name="sexo" value="N">No Binario</label>
                     </div>
-                    <div class="select_tc content-form">
+                    <div class="select_tc content-form der2izq">
                         <p class="color-text-form">Tipo de consulta:</p>
                         <p>
                            <select class="tipo_consulta" id="tipo_consulta" size="3" onchange="mostrarInputFile()"> <!-- el atributo size hace que NO sea un dropdownlist ademas, permite ver el elemento preseleccionado!-->
@@ -63,7 +63,9 @@
                         <p class="color-text-form">Subi una imagen de que peinatado te gustaría...</p>
                         <p><input type="file" id="archivo" onchange="validarImagen()"></p>                        
                     </div>
-                    <input class="enviar pointer" id="btn-enviar" type="button"  value="Enviar">
+                    <div class="aba2arr">
+                        <input class="enviar pointer" id="btn-enviar" type="button"  value="Enviar">
+                    </div>
                 </div>
             </form>
             <p id="error-carga">Error de datos cargados</p>
