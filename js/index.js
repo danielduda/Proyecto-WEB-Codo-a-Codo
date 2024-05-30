@@ -1,11 +1,9 @@
 document.getElementById('enlace').addEventListener('click', function(event) {
-    event.preventDefault(); // Evita que el enlace navegue inmediatamente
+    event.preventDefault(); 
     var contenido = document.querySelector('.contenido');
-    contenido.classList.remove("izq2der");
     contenido.classList.add('desaparecer');
     
-    // Espera a que la animación termine antes de navegar a la nueva página
     setTimeout(function() {
       window.location.href = './html/home.html';
-    }, 1000); // La duración debe coincidir con la duración de la animación CSS
+    }, 1000); 
   });
